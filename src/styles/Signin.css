@@ -1,0 +1,240 @@
+:root {
+    font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color-scheme: light dark;
+    scroll-behavior: smooth;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+  }
+  
+  /* utility classes */
+  body{
+    
+  padding: 0;
+  margin: 0;
+  }
+  
+  button{cursor: pointer;}
+  
+  .visible{
+  
+    display: block;
+  
+  }
+  
+  .notVisible{
+  
+    display: none;
+  
+  
+  }
+  
+    .line{
+      background-color: black;
+      height: 1px;
+      width: 30px;
+      margin: 0px 15px;
+    }
+  
+  
+  /* utility classes */
+  .authPage{
+    display: flex;
+
+  }
+  
+  
+  .heroImage{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5%;
+  
+  }
+ 
+  
+  .form{
+   width: 30%;
+  
+  margin-left: 12%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  
+  }
+  
+  .form input[type=text],input[type=email],input[type=password]{
+    border-radius: 4px;
+    height: 30px;
+    border:1px solid grey;
+    margin-bottom: 10px;
+  width: 100%;
+  font-size: 0.9rem;
+ position: relative;
+  text-indent: 10px;
+  }
+  
+.eyeIcon{
+  position: absolute;
+  margin-left: 92%;
+  width: 20px;
+  margin-top: -35px;
+  
+}
+  
+  .form ::placeholder{
+    color:grey;
+    text-indent: 10px;
+  }
+  
+  
+  
+  .form label[for=name],label[for=email],label[for=password],label[for=confirmPassword]  {
+    font-size: 0.85rem;
+    color: black;
+  font-weight: bold;
+  
+  
+  }
+  
+  .form label[for=terms]{
+    font-size: 0.8rem;
+  
+  }
+  input::-ms-reveal,
+  input::-ms-clear {
+    display: none;
+  }
+
+  .signinErr{
+    color: red;
+    text-align: center;
+    margin-top: -15px;
+    font-weight: bold;
+  }
+  
+  .authBtn{
+  width: 50%;
+  margin-bottom: 10px;
+  height: 30px;
+  border-radius: 4px;
+  margin-left: 25%;
+  background-color: #1f7efa;
+  border: none;
+  color: white;
+  font-weight: bold;
+  
+  }
+  
+  .signinText{
+  
+  text-align-last: center;
+    text-align: center;
+  width: 80%;
+    font-size: 0.9rem;
+    font-weight: bold;
+    line-height: 20px;
+  margin-left: 10%;
+  margin-top: -5px;
+  
+  }
+  
+  .authPageNav {
+  display: flex;
+  
+  justify-content: flex-end;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  
+    }
+    .authPageNav button{
+  margin-left: 10px;
+  width: 25%;
+  margin-top: 10px;
+  height: 30px;
+  border-radius: 4px;
+    }
+  
+    .activePage{
+  background-color:#1f7efa;
+  outline: none;
+  color: white;
+  border: none;
+  transition: all 0.4s ease-in-out;
+    }
+  
+    .notActive{
+      background-color: white;
+      outline: none;
+      color: black;
+      opacity: 0.5;
+      transition: all 0.4s ease-in-out;
+   
+    }
+    
+  .oauthText{
+    display:flex;
+    align-items:center;
+  
+    justify-content:center;
+    
+  }
+  
+  .oauthText p{
+    text-align:center;
+    font-size:0.8em;
+    color:white;
+  }
+  
+  .oauthDiv{
+  width: 50%;
+  margin-left: 25%;
+    margin-top: 10px;
+  
+    display: flex;
+    justify-content: space-between;
+  
+  }
+  .oauthDiv img{
+    width: 20px;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 1px 10px;
+    cursor: pointer;
+  
+  }
+  
+   @media screen and (max-width:1100px) {
+  
+   .heroImage{
+    width: 35%;
+  }
+  
+  .form{
+    width: 35%;
+   
+   margin-left: 20%;
+  
+   
+   }
+  
+  }
+  
+  @media screen and (max-width:950px) {
+    .heroImage{
+      width: 25%;
+    }
+    
+    .form{
+     margin-left: 30%;
+     }
+  }
+ 
