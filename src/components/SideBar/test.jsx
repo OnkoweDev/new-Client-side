@@ -24,8 +24,8 @@ function activeLink(){
     item.addEventListener('mouseover', activeLink))
 
 
-const Sidebar = ({children}) => {
-    const [isOpen, setIsOpen] = useState(false)
+const Sidebar = () => {
+    const [isOpen, setIsOpen] = useState()
 
     const toggle = () => {
         setIsOpen(!isOpen)
@@ -33,7 +33,7 @@ const Sidebar = ({children}) => {
   return (
     <>
         <div className="container">
-            <div style={{width: isOpen ? "300px" : "50px"}}onClick={toggle} className="navigation">
+            <div style={{width: isOpen ? "300px" : "50px"}} className="navigation">
                <ul>
                <li>
                         <a href=''>
@@ -93,10 +93,25 @@ const Sidebar = ({children}) => {
 
                     
                 </ul> 
-            </div>                   
+            </div>
 
            <div className="main">
-              {children}
+                <div className="topbar">
+                    <div style={{marginLeft: isOpen ? "20px" : "0"}} className="toggle">
+                        <AiOutlineMenu onClick={toggle} />   
+                    </div>
+                    {/* Search  */}
+                    <div className="search">
+                        <label>
+                            <input type="text" placeholder='Search' />
+                            <div className="icon"><BiSearch /></div>
+                        </label>
+                    </div>
+                    {/* User Image */}
+                    <div className="user">
+                         <img src={apple} />
+                    </div>
+                </div>
            </div>
         </div>
     </>

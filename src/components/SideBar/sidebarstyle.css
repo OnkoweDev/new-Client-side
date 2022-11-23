@@ -14,15 +14,10 @@
 
 }
 
-body {
-    min-height: 100vh;
-    overflow-x: hidden;
-}
 
 .container { 
-    position: relative;
-    width: 100%;
-}
+   display: flex;
+     }
 .navigation {
     position:fixed;
     width: 300px;
@@ -119,4 +114,70 @@ body {
     border-radius: 50%;
     box-shadow: 35px -35px 0 10px var(--white);
     pointer-events:none;
+}
+
+/* main styles */
+
+main{
+    width: 100%;
+    padding: 20px;
+}
+.topbar {
+    display:flex;
+    align-items: center;
+    padding: 10px 15px; 
+    position: relative;
+    margin-left: 240px;
+    
+}
+.toggle {
+    font-size: 25px;
+    display:flex;
+    margin-left: 50px;
+    cursor: pointer;
+    position: absolute;  
+}
+
+.search {
+    position: relative;
+    width: 400px;
+    margin: 0 10px;
+    }
+.search label {
+    position: relative;
+    width: 40px;
+    }
+.search label input {
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    padding: 5px 20px;
+    padding-left: 35px;
+    font-size:18px;
+    outline: none;
+    border: 1px solid var(--black2);
+}
+.search label  .icon {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    font-size: 1.2em;
+
+}
+.user {
+    position:relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.user img {
+    position:absolute;   
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
