@@ -1,82 +1,69 @@
-import React from 'react'
-import './styles.css'
-import facebook from './facebook.png'
+import React, { useState } from 'react';
 
-const Navbar = () => {
-    function myFunction() {
-        var x = document.getElementById("myTopnav");
-        if (x.className === "topnav") {
-          x.className += " responsive";
-        } else {
-          x.className = "topnav";
-        }
-      }
+import { Link } from 'react-router-dom';
+import './Navbar.css'
+import img from './facebook.png';
+function Navbar() {
+ 
+
   return (
     <>
-        <div className="topnav" id="myTopnav">
-           
-            <div className="dropdown">
-                <button className="dropbtn">New Project
-                <i className="fa fa-caret-down"></i>
-                </button>
-                <div className="dropdown-content">
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
+      <div className="menu-bar">
+        <ul>
+            <li className="activeN"><a href="#">New Project</a>
+            <div className="sub-menu-1">
+                  <ul>
+                  <li><a href="#">Ebook writing</a></li>
+                  <li><a href="#">Article writing</a></li>
+                  <li><a href="#">Facebook Ad</a></li>
+                  <li><a href="#">Instagram caption</a></li>
+                  <li><a href="#">Linkedln Shot post</a></li>
+                  <li><a href="#">Google Ad Description</a></li>
+                  <li><a href="#">Youtube Description</a></li>
+                  <li><a href="#">Product Description</a></li>
+                  <li><a href="#">Google Ad Titles</a></li>
+                  </ul>  
                 </div>
-            </div>
+            </li>
 
-            <div className="dropdown">
-                <button className="dropbtn">Publish
-                <i className="fa fa-caret-down"></i>
-                </button>
-                <div className="dropdown-content">
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
+            <li><a href="#">Publish</a>
+                <div className="sub-menu-1">
+                  <ul>
+                  <li>convert to:</li>
+                  <li><a href="#">PDF</a></li>
+                  <li><a href="#">MS WORD</a></li>
+                  </ul>  
                 </div>
-            </div>
-
-            <a href="#about">Draft</a>
-
-
-            <div className="dropdown">
-                <button className="dropbtn">Translate
-                <i className="fa fa-caret-down"></i>
-                </button>
-                <div className="dropdown-content">
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
-                </div>
-            </div>
-
-            <a href="#about">Collaborate</a>
-            <a href="javascript:void(0);" className="icon" onclick={myFunction}>&#9776;</a>
-
-            <div className="profileSide">
-                <li>
-                  <img src={facebook} className="profile"  />
-                    <ul>
-                        <li className="sub-item">
-                        <p>Dashboard</p>
-                        </li>
-                        <li className="sub-item">
-                        <p>My Orders</p>
-                        </li>
-                        <li className="sub-item">
-                        <p>Update Profile</p>
-                        </li>
-                        <li className="sub-item">
-                        <p>Logout</p>
-                        </li>
-                    </ul>
-          </li>
-    </div>
             
-</div>
+            </li>
+            <li><a href="#">Draft</a></li>
+
+            <li><a href="#">Translate</a>
+            <div className="sub-menu-1">
+                  <ul>
+                  <li><a href="#">English</a></li>
+                  <li><a href="#">French</a></li>
+                  <li><a href="#">Spanish</a></li>
+                  <li><a href="#">German</a></li>
+                  </ul>  
+                </div>
+            </li>
+            <li><a href="#">Collaborate</a></li>
+            <li><a href="#"><img src={img} /></a>
+            <div className="sub-menu-1">
+                  <ul>
+                  <li><a href="#">Mission</a></li>
+                  <li><a href="#">Vision</a></li>
+                  <li><a href="#">Aims</a></li>
+                  <li><a href="#">Objectives</a></li>
+                  </ul>  
+                </div>
+            </li>
+        </ul>
+   </div>
+     
     </>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;
